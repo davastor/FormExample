@@ -16,7 +16,7 @@ body {
 }
 
 .logo-container {
-    margin: 50% 0px;
+    margin: 30vh 0px;
     background-color: rgba(20, 20, 20, .8);
     padding: 20px;
     display: flex;
@@ -28,7 +28,8 @@ body {
 }
 
 img {
-    width: 20%;
+    width: 8rem;
+    height: 8rem;
 
 }
 
