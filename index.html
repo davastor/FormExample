@@ -9,15 +9,18 @@
 </head>
 <body>
     <div class="pic-container">
+        <div class="logo-container">
+            <img src="leaf.png" alt="leaf">
+            SIGN-UP FORM
+        </div> 
     </div>
 
     <div class="right-container">
-
-
-        <div class="hero-container">       
+        <div class="hero-container">  This is not a real service!  However, you should just sign up anyway.  
+            <span>You might get something cool.</span>   
         </div>
 
-        <form>
+        <form id="form">
                 <div class="form-container">
                     <div class="form-title">Let's get started.</div>
     
@@ -43,12 +46,12 @@
         
                     <div class="input">
                         <label for="password">Password</label>
-                        <input type="text" id="password" required>
+                        <input type="password" id="password" required>
                     </div>
         
                     <div class="input">
                         <label for="confirm-password">Confirm Password</label>
-                        <input type="text" id="confirm-password" required>
+                        <input type="password" id="confirm-password" required>
                     </div>
                 </div>
 
@@ -67,4 +70,39 @@
 
 
 </body>
+
+
+<script type="text/javascript">
+
+    const pass = document.getElementById("password");
+    const confirmPass = document.getElementById("confirm-password")
+    const form = document.getElementById("form");
+
+    confirmPass.addEventListener("input", (event)=> {
+        if(pass.value !== confirmPass.value){
+            pass.classList.add("password-error");
+            confirmPass.classList.add("password-error");
+        }
+        else{
+            pass.classList.remove("password-error");
+            confirmPass.classList.remove("password-error");
+        }
+    })
+
+
+
+    form.addEventListener("submit", (event) => {
+        if (pass.value !== confirmPass.value){
+            confirmPass.setCustomValidity("This password does not match the first field.");
+            console.log("Test");
+            event.preventDefault();
+        }
+        else{
+            form.submit();
+            form.reset();
+        }
+    });
+
+
+</script>
 </html>

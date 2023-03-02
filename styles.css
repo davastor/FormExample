@@ -1,5 +1,6 @@
 :root {
     color:aqua;
+    font-family: "Arial", "Verdana", "Helvetica";
 }
 
 body {
@@ -7,13 +8,32 @@ body {
 }
 
 .pic-container {
+    background-image: url("landscape.jpg");
+    background-size: cover;
     background-color: black;
     width: 40vw;
     height: 100vh;
 }
 
+.logo-container {
+    margin: 50% 0px;
+    background-color: rgba(20, 20, 20, .8);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+img {
+    width: 20%;
+
+}
+
 .right-container {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(20, 20, 20);
     width:60vw;
     height:100vh;
     display:flex;
@@ -21,20 +41,22 @@ body {
 }
 
 .hero-container {
-    background-color: aqua;
+    background-color: rgb(7, 220, 0);
     height: 45%;
+    color:#fff;
+    padding: 40px;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 40px;
+    box-shadow: 0 5px 20px -2px rgb(23, 212, 51)
 }
 
 form {
     background-color: rgb(20, 20, 20);
     width: 100%;
     height: auto;
-}
-
-.btn-section {
-    background-color: rgb(0, 0, 0);
-    height: auto;
-    flex-grow: 1;s
 }
 
 .input {
@@ -55,8 +77,14 @@ input {
 
 input:focus {
     outline: none !important;
-    border:1px solid rgb(0, 125, 153);
+    border:1px solid rgb(7, 220, 0);
     box-shadow: 0 0 2px #719ECE;
+}
+
+.password-error {
+    outline: none !important;
+    border:1px solid rgb(153, 38, 0);
+    box-shadow: 0 0 2px #ccce71;
 }
 
 .form-title {
@@ -66,12 +94,12 @@ input:focus {
 }
 
 .form-container {
-    margin:40px;
+    padding: 40px;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
-
+    box-shadow: 0 5px 20px -2px rgb(49, 49, 49)
 }
 
 label {
@@ -93,10 +121,10 @@ label {
 button {
     appearance: none;
     background-color: transparent;
-    border: 2px solid #ffffff;
+    border: 2px solid rgb(7, 220, 0);
     border-radius: 8px;
     box-sizing: border-box;
-    color: #ffffff;
+    color: rgb(7, 220, 0);
     cursor: pointer;
     display: inline-block;
     font-family: "Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
@@ -110,7 +138,7 @@ button {
     padding: 16px 24px;
     text-align: center;
     text-decoration: none;
-    
+    margin-bottom: 40px;
     user-select: none;
     touch-action: manipulation;
     width: 33%;
@@ -123,16 +151,31 @@ button {
   
   button:hover {
     color: #fff;
-    background-color: rgb(0, 125, 153);
-    border:1px solid rgb(0, 125, 153);
-    box-shadow: 0 0 2px #719ECE;
+    background-color: rgb(7, 220, 0);
+    border:1px solid rgb(7, 220, 0);
+    box-shadow: 0 0 4px #719ECE;
 
   }
   
   button:active {
     box-shadow: none;
-    transform: translateY(0);
+    background-color: rgba(0, 71, 22, 0.431);
+    border:1px solid rgba(0, 71, 22, 0.431);
   }
+
+  a:link {
+    text-decoration: none;
+    color: rgb(7, 220, 0);
+  }
+
+  a:hover {
+    color: rgba(0, 71, 22, 0.431);
+  }
+
+  a:visited {
+    color: rgb(7, 220, 0);
+  }
+  
 
 @media only screen and (max-width: 770px){
 
@@ -158,6 +201,18 @@ button {
     .form-container {
         text-align: center;
         justify-content: space-evenly;
+    }
+
+    .btn-container {
+        text-align: center;
+    }
+
+    .login-cont {
+        justify-content: center;
+    }
+
+    .logo-container {
+        margin: 0;
     }
 
 }
